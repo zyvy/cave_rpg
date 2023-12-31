@@ -215,7 +215,7 @@ function attack() {
     fighting === 2 ? winGame() : defeatMonster();
   }
   if (Math.random() <= .1 && inventory.length !== 1) {
-    text.innerText += " Ваша " + inventory.pop() + " сломался.";
+    text.innerText += " Ваше оружие - " + inventory.pop() + " сломалось.";
     currentWeapon--;
   }
 }
@@ -231,7 +231,7 @@ function isMonsterHit() {
 }
 
 function dodge() {
-  text.innerText = "Вы увернулись от удара " + monsters[fighting].name;
+  text.innerText = "Вы увернулись от удара монстра " + monsters[fighting].name;
 }
 
 function defeatMonster() {
