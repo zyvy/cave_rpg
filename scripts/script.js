@@ -72,7 +72,7 @@ const locations = [
     {
         name: "враг повержен",
         "button text": ["На городскую площадь", "На городскую площадь", "На городскую площадь"],
-        "button functions": [goTown, goTown, easterEgg],
+        "button functions": [goTown, goTown, goTown],
         text: 'Монстр захрипел "Грр!" и умер. Вы получили опыт и нашли немного золота.',
         "picture":"./img/05_win.jpg"
     },
@@ -119,6 +119,10 @@ function update(location) {
 }
 
 function goTown() {
+  let rand = Math.floor(Math.random() * (3 - 1 + 1) + 1)
+  if (rand == 2) {
+    easterEgg()
+  }
   update(locations[0]);
 }
 
